@@ -75,13 +75,23 @@ function About() {
 function Project() {
   return (
     <section className="content-section work-section" id="work">
-      <SectionHeading index="01" title="Selected work" note="One project in progress, many ideas ahead." />
+      <SectionHeading index="01" title="Selected work" note="Software projects and systems built." />
       <article className="project-feature">
         <div className="project-topline"><span className="project-number">PROJECT 001</span><span className="project-status"><span /> Partially working · In progress</span></div>
         <div className="project-main"><div><h3>Multi-RAG<br />Code Reviewer<span className="title-period">.</span></h3></div><div className="project-intro"><p>An in-development code-review tool exploring how multiple retrieval-augmented generation (RAG) strategies or knowledge sources can provide relevant context for AI-assisted code review.</p><a className="text-link" href="#project-notes">Read the project notes <span aria-hidden="true">↓</span></a></div></div>
         <div className="project-divider" />
         <div className="project-details" id="project-notes"><div><p className="detail-label">THE QUESTION</p><p>How can useful codebase context help an AI give more informed code-review feedback?</p></div><div><p className="detail-label">WHAT I’M EXPLORING</p><p>Retrieval workflows that bring relevant code, conventions, or documentation into the review process.</p></div><div><p className="detail-label">CURRENT STATE</p><p>This is a partially working project. Implementation details and verified working features are still being documented.</p></div></div>
         <div className="project-footer"><span>IN DEVELOPMENT <span aria-hidden="true">↗</span></span><span>Details will grow with the project.</span></div>
+      </article>
+      <article className="project-secondary" aria-labelledby="home-server-title">
+        <div className="project-secondary-heading">
+          <span className="project-number">PROJECT 002 <span aria-hidden="true">/</span> HOME LAB</span>
+          <h3 id="home-server-title">Home Media &amp; Backup Server</h3>
+        </div>
+        <div className="project-secondary-copy">
+          <p>A budget home server for personal backups and media streaming across the home network, using Plex and Jellyfin with RAID 1 storage.</p>
+          <div className="project-tags" aria-label="Technologies and setup"><span>Plex</span><span>Jellyfin</span><span>RAID 1</span><span>Home network</span></div>
+        </div>
       </article>
     </section>
   )
