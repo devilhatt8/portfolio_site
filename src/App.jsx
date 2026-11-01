@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 import sampleImage from '../IMG-20240924-WA0015.jpg'
 
 const skills = [
-  { label: 'Languages', items: ['C++'] },
+  { label: 'Languages', items: ['C', 'C++', 'Python', 'JavaScript', 'TypeScript', 'SQL'] },
+  { label: 'Frontend', items: ['HTML', 'CSS', 'Tailwind CSS'] },
+  { label: 'Backend & data', items: ['Node.js', 'Express', 'PostgreSQL'] },
   { label: 'Foundations', items: ['Data structures', 'Algorithms'] },
   { label: 'Tools', items: ['Git', 'GitHub'] },
   { label: 'Exploring', items: ['RAG concepts', 'AI developer tools'] },
