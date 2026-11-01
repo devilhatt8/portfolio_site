@@ -63,7 +63,7 @@ function SectionHeading({ index, title, note }) {
 function About() {
   return (
     <section className="content-section about-section" id="about">
-      <SectionHeading index="01" title="A little about me" />
+      <SectionHeading index="02" title="A little about me" />
       <div className="about-grid">
         <p className="about-lede">Curious by default.<br />Learning by <span>building.</span></p>
         <div className="about-copy"><p>I’m strengthening my computer science fundamentals while building projects that help me learn beyond the classroom. I’m currently pursuing a B.Tech at Maharaja Agrasen Institute of Technology (2024–2028). My interests include C++, problem-solving, and exploring how retrieval-augmented generation can make AI tools more useful for developers.</p><p>I value clear thinking, maintainable code, and honest progress. This portfolio will grow as I build, test, and ship more projects.</p><a href="#contact" className="text-link">A note or a question? Say hello <span aria-hidden="true">↗</span></a></div>
@@ -75,7 +75,7 @@ function About() {
 function Project() {
   return (
     <section className="content-section work-section" id="work">
-      <SectionHeading index="02" title="Selected work" note="One project in progress, many ideas ahead." />
+      <SectionHeading index="01" title="Selected work" note="One project in progress, many ideas ahead." />
       <article className="project-feature">
         <div className="project-topline"><span className="project-number">PROJECT 001</span><span className="project-status"><span /> Partially working · In progress</span></div>
         <div className="project-main"><div><h3>Multi-RAG<br />Code Reviewer<span className="title-period">.</span></h3></div><div className="project-intro"><p>An in-development code-review tool exploring how multiple retrieval-augmented generation (RAG) strategies or knowledge sources can provide relevant context for AI-assisted code review.</p><a className="text-link" href="#project-notes">Read the project notes <span aria-hidden="true">↓</span></a></div></div>
@@ -118,5 +118,5 @@ export default function App() {
     document.documentElement.dataset.theme = theme
     try { localStorage.setItem('portfolio-theme', theme) } catch { /* Storage can be disabled. */ }
   }, [theme])
-  return <><a className="skip-link" href="#main">Skip to content</a><div className="page-shell"><Header theme={theme} onToggle={() => setTheme(theme === 'dark' ? 'light' : 'dark')} /><main id="main"><Hero /><About /><Project /><Skills /><Contact /></main><Footer /></div></>
+  return <><a className="skip-link" href="#main">Skip to content</a><div className="page-shell"><Header theme={theme} onToggle={() => setTheme(theme === 'dark' ? 'light' : 'dark')} /><main id="main"><Hero /><Project /><About /><Skills /><Contact /></main><Footer /></div></>
 }
