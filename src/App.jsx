@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
-import sampleImage from '../IMG-20240924-WA0015.jpg'
-
 const skills = [
   { label: 'Languages', items: ['C', 'C++', 'Python', 'JavaScript', 'TypeScript', 'SQL'] },
   { label: 'Frontend', items: ['HTML', 'CSS', 'Tailwind CSS'] },
   { label: 'Backend & data', items: ['Node.js', 'Express', 'PostgreSQL'] },
   { label: 'Foundations', items: ['Data structures', 'Algorithms'] },
-  { label: 'Tools', items: ['Git', 'GitHub'] },
+  { label: 'Tools', items: ['Git', 'GitHub', 'Docker', 'Ubuntu Server'] },
   { label: 'Exploring', items: ['RAG concepts', 'AI developer tools'] },
 ]
 
@@ -38,20 +36,20 @@ function Hero() {
   return (
     <section className="hero" id="home" aria-labelledby="hero-title">
       <div className="hero-copy">
-        <p className="eyebrow"><span className="status-dot" /> Student Developer <span className="eyebrow-sep">/</span> AI &amp; Developer Tools</p>
-        <h1 id="hero-title">Building useful things,<br /><span>one project at a time.</span></h1>
-        <p className="hero-description">I’m Gurnoorbir Singh, a student developer interested in software engineering, algorithms, and AI-powered developer tools. I learn by building and turning ideas into working projects.</p>
+        <p className="eyebrow"><span className="status-dot" /> Student Developer <span className="eyebrow-sep">/</span> MAIT · 2024–2028</p>
+        <h1 id="hero-title">Building AI tools<br />and <span>self-hosted systems.</span></h1>
+        <p className="hero-description">I’m Gurnoorbir Singh, a B.Tech student building practical software: AI-assisted developer tools, home infrastructure, and full-stack web projects.</p>
         <div className="hero-actions">
           <a className="button button-primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
           <a className="button button-quiet" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
         </div>
-        <p className="availability"><span className="availability-rule" /> Currently learning, building, and figuring things out.</p>
+        <p className="availability"><span className="availability-rule" /> Learning through systems I can build, use, and improve.</p>
       </div>
-      <figure className="hero-visual">
-        <div className="image-frame"><img src={sampleImage} alt="Sample image supplied for the portfolio: a plane flying over a snowy landscape" /></div>
-        <figcaption><span>01 / FIELD NOTES</span><span>A little room to explore.</span></figcaption>
-      </figure>
-      <a className="scroll-cue" href="#about" aria-label="Scroll to About">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+      <aside className="hero-note" aria-label="Current focus">
+        <span>Current focus</span>
+        <p>Reliable systems, thoughtful tooling, and honest iteration.</p>
+      </aside>
+      <a className="scroll-cue" href="#work" aria-label="Scroll to projects">SCROLL TO PROJECTS <span aria-hidden="true">↓</span></a>
     </section>
   )
 }
@@ -76,22 +74,16 @@ function Project() {
   return (
     <section className="content-section work-section" id="work">
       <SectionHeading index="01" title="Selected work" note="Software projects and systems built." />
-      <article className="project-feature">
-        <div className="project-topline"><span className="project-number">PROJECT 001</span><span className="project-status"><span /> Partially working · In progress</span></div>
-        <div className="project-main"><div><h3>Multi-RAG<br />Code Reviewer<span className="title-period">.</span></h3></div><div className="project-intro"><p>An in-development code-review tool exploring how multiple retrieval-augmented generation (RAG) strategies or knowledge sources can provide relevant context for AI-assisted code review.</p><a className="text-link" href="#project-notes">Read the project notes <span aria-hidden="true">↓</span></a></div></div>
+      <article className="project-feature home-lab" aria-labelledby="home-server-title">
+        <div className="project-topline"><span className="project-number">PROJECT 001 <span aria-hidden="true">/</span> HOME LAB</span><span className="project-status"><span /> Running at home</span></div>
+        <div className="project-main"><div><h3 id="home-server-title">Home Media &amp;<br />Backup Server<span className="title-period">.</span></h3></div><div className="project-intro"><p>A budget Ubuntu Server that keeps personal photo backups and runs private media streaming services across my home network.</p><div className="project-tags" aria-label="Home Lab technologies"><span>Docker</span><span>Jellyfin</span><span>Immich</span><span>RAID 1</span></div></div></div>
         <div className="project-divider" />
-        <div className="project-details" id="project-notes"><div><p className="detail-label">THE QUESTION</p><p>How can useful codebase context help an AI give more informed code-review feedback?</p></div><div><p className="detail-label">WHAT I’M EXPLORING</p><p>Retrieval workflows that bring relevant code, conventions, or documentation into the review process.</p></div><div><p className="detail-label">CURRENT STATE</p><p>This is a partially working project. Implementation details and verified working features are still being documented.</p></div></div>
-        <div className="project-footer"><span>IN DEVELOPMENT <span aria-hidden="true">↗</span></span><span>Details will grow with the project.</span></div>
+        <div className="project-details home-lab-details"><div><p className="detail-label">SERVICES</p><p>Jellyfin for home media streaming and Immich as a self-hosted Google Photos alternative for personal backups.</p></div><div><p className="detail-label">HARDWARE</p><p>AMD FX-4300 · 8 GB DDR3 · 256 GB SATA SSD for Ubuntu Server. Built-in gigabit Ethernet; no add-in networking card.</p></div><div><p className="detail-label">STORAGE &amp; RESILIENCE</p><p>RAID 1 across four older drives: two 1 TB and two 512 GB. Chosen to add redundancy because the drives had low reported health.</p></div><div><p className="detail-label">OPERATIONS</p><p>Connected to a UPS and configured for wake-on-LAN so it can be started over the network when needed.</p></div></div>
+        <div className="project-footer"><span>BUILT TO BE USED <span aria-hidden="true">↗</span></span><span>A build write-up is coming to GitHub.</span></div>
       </article>
-      <article className="project-secondary" aria-labelledby="home-server-title">
-        <div className="project-secondary-heading">
-          <span className="project-number">PROJECT 002 <span aria-hidden="true">/</span> HOME LAB</span>
-          <h3 id="home-server-title">Home Media &amp; Backup Server</h3>
-        </div>
-        <div className="project-secondary-copy">
-          <p>A budget home server for personal backups and media streaming across the home network, using Plex and Jellyfin with RAID 1 storage.</p>
-          <div className="project-tags" aria-label="Technologies and setup"><span>Plex</span><span>Jellyfin</span><span>RAID 1</span><span>Home network</span></div>
-        </div>
+      <article className="project-secondary" aria-labelledby="rag-title">
+        <div className="project-secondary-heading"><span className="project-number">PROJECT 002 <span aria-hidden="true">/</span> AI TOOLING</span><h3 id="rag-title">Multi-RAG Code Reviewer</h3></div>
+        <div className="project-secondary-copy"><p>An in-development code-review tool exploring how retrieval-augmented context can make AI feedback more aware of a codebase, its conventions, and its documentation.</p><span className="project-status"><span /> Partially working · In progress</span></div>
       </article>
     </section>
   )
