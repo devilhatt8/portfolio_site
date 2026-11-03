@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import profilePhoto from './assets/gurnoorbir-singh.jpg'
 const skills = [
   { label: 'Languages', items: ['C', 'C++', 'Python', 'JavaScript', 'TypeScript', 'SQL'] },
   { label: 'Frontend', items: ['HTML', 'CSS', 'Tailwind CSS'] },
@@ -45,7 +46,8 @@ function Hero() {
         </div>
         <p className="availability"><span className="availability-rule" /> Learning through systems I can build, use, and improve.</p>
       </div>
-      <aside className="hero-note" aria-label="Current focus">
+      <aside className="hero-note" aria-label="Portrait and current focus">
+        <div className="portrait-frame"><img src={profilePhoto} alt="Gurnoorbir Singh outdoors in a mountain landscape" /></div>
         <span>Current focus</span>
         <p>Reliable systems, thoughtful tooling, and honest iteration.</p>
       </aside>

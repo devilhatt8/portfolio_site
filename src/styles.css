@@ -71,7 +71,9 @@ h1, h2, h3, p, figure { margin-top: 0; }
 .button-quiet:hover { border-color: var(--muted); background: var(--surface); color: var(--text); }
 .availability { display: flex; align-items: center; gap: 9px; margin: 46px 0 0; color: var(--muted); font-size: 10px; }
 .availability-rule { width: 19px; height: 1px; background: var(--accent); }
-.hero-note { align-self: center; padding: 21px 0 21px 24px; border-left: 1px solid var(--accent); color: var(--muted); }
+.hero-note { align-self: center; padding: 0 0 21px 24px; border-left: 1px solid var(--accent); color: var(--muted); }
+.portrait-frame { width: 100%; max-width: 220px; margin: 0 0 21px; padding: 7px; border: 1px solid var(--line); background: var(--surface); }
+.portrait-frame img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; filter: saturate(.7) sepia(.12) contrast(.97); }
 .hero-note span { color: var(--accent-strong); font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
 .hero-note p { margin: 11px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: 18px; line-height: 1.45; }
 .scroll-cue { position: absolute; bottom: 31px; left: 0; display: flex; gap: 11px; align-items: center; color: var(--muted); font-size: 10px; letter-spacing: .12em; }
@@ -168,6 +170,7 @@ h1, h2, h3, p, figure { margin-top: 0; }
   .hero h1 { font-size: clamp(42px, 11vw, 58px); }
   .hero-description { max-width: 430px; }
   .hero-note { max-width: 310px; padding-left: 18px; }
+  .portrait-frame { max-width: 190px; }
   .scroll-cue { bottom: 29px; }
   .about-grid { grid-template-columns: 1fr; gap: 22px; }
   .about-lede { font-size: 31px; }
