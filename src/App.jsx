@@ -36,6 +36,9 @@ function Header({ theme, onToggle }) {
 function Hero() {
   return (
     <section className="hero" id="home" aria-labelledby="hero-title">
+      <div className="sakura-petals" aria-hidden="true">
+        <i /><i /><i /><i /><i /><i /><i />
+      </div>
       <div className="hero-copy">
         <p className="eyebrow"><span className="status-dot" /> Student Developer <span className="eyebrow-sep">/</span> MAIT · 2024–2028</p>
         <h1 id="hero-title">Building AI tools<br />and <span>self-hosted systems.</span></h1>
