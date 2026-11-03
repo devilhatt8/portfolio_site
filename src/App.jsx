@@ -36,6 +36,10 @@ function Header({ theme, onToggle }) {
 function Hero() {
   return (
     <section className="hero" id="home" aria-labelledby="hero-title">
+      <div className="sakura-branch" aria-hidden="true">
+        <i className="branch-main" /><i className="branch-upper" /><i className="branch-lower" />
+        <b className="blossom blossom-one" /><b className="blossom blossom-two" /><b className="blossom blossom-three" /><b className="blossom blossom-four" />
+      </div>
       <div className="sakura-petals" aria-hidden="true">
         <i /><i /><i /><i /><i /><i /><i />
       </div>
