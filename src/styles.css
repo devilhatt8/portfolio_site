@@ -54,25 +54,6 @@ button { font: inherit; }
 .theme-toggle:hover { background: var(--surface); border-color: var(--muted); }
 .theme-toggle > span:first-child { font-size: 16px; line-height: 1; }
 .hero { position: relative; min-height: 590px; display: grid; grid-template-columns: minmax(0, 1fr) 250px; align-items: center; gap: clamp(34px, 8vw, 110px); padding: 75px 0 92px; }
-.sakura-branch { position: absolute; z-index: 0; top: -15px; right: -56px; width: min(47vw, 540px); height: 245px; overflow: hidden; pointer-events: none; opacity: .72; }
-.sakura-branch i { position: absolute; display: block; height: 4px; border-radius: 999px; background: color-mix(in srgb, var(--text) 52%, var(--accent)); transform-origin: right center; }
-.branch-main { top: 41px; right: -27px; width: 480px; transform: rotate(162deg); }
-.branch-upper { top: 59px; right: 172px; width: 210px; transform: rotate(-151deg); }
-.branch-lower { top: 96px; right: 276px; width: 154px; transform: rotate(144deg); }
-.blossom { position: absolute; width: 42px; height: 27px; border-radius: 50% 50% 48% 48%; background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent-strong) 45%, #f5ddd9) 0 10%, transparent 12%), radial-gradient(ellipse at 50% 0%, #f7e5e0 0 38%, transparent 40%), radial-gradient(ellipse at 100% 55%, #f6e0dc 0 38%, transparent 40%), radial-gradient(ellipse at 50% 100%, #f7e5e0 0 38%, transparent 40%), radial-gradient(ellipse at 0 55%, #f6e0dc 0 38%, transparent 40%); filter: drop-shadow(0 2px 4px color-mix(in srgb, var(--text) 15%, transparent)); }
-.blossom-one { top: 30px; right: 138px; transform: rotate(-18deg) scale(1.12); }
-.blossom-two { top: 77px; right: 250px; transform: rotate(17deg) scale(.78); }
-.blossom-three { top: 117px; right: 354px; transform: rotate(-31deg) scale(.91); }
-.blossom-four { top: 42px; right: 341px; transform: rotate(27deg) scale(.58); }
-.sakura-petals { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
-.sakura-petals i { position: absolute; width: 12px; height: 9px; border-radius: 80% 15% 80% 15%; background: #f6dfdc; box-shadow: inset -2px -1px 0 color-mix(in srgb, var(--accent-strong) 30%, transparent); opacity: .46; transform: rotate(25deg); }
-.sakura-petals i:nth-child(1) { top: 5%; left: 64%; }
-.sakura-petals i:nth-child(2) { top: 10%; left: 89%; transform: rotate(105deg) scale(.7); opacity: .32; }
-.sakura-petals i:nth-child(3) { top: 18%; left: 57%; transform: rotate(210deg) scale(.72); }
-.sakura-petals i:nth-child(4) { top: 16%; left: 79%; transform: rotate(60deg) scale(.5); opacity: .25; }
-.sakura-petals i:nth-child(5) { top: 14%; left: 68%; transform: rotate(165deg) scale(.75); }
-.sakura-petals i:nth-child(6) { top: 11%; left: 46%; transform: rotate(310deg) scale(.42); opacity: .24; }
-.sakura-petals i:nth-child(7) { top: 17%; left: 95%; transform: rotate(75deg) scale(.58); opacity: .3; }
 .hero-copy { position: relative; z-index: 1; padding-bottom: 6px; }
 .eyebrow, .section-index, .section-note, .project-number, .project-status, .detail-label, .project-footer, .skill-label, .contact-prompt, .contact-hint, .back-top, .availability, .scroll-cue, .hero-visual figcaption { font-family: var(--mono); }
 .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 25px; color: var(--muted); font-size: 12px; letter-spacing: .045em; }
@@ -165,7 +146,6 @@ h1, h2, h3, p, figure { margin-top: 0; }
 @media (max-width: 760px) {
   :root { --gutter: 25px; }
   .hero { min-height: auto; grid-template-columns: 1fr .74fr; gap: 25px; padding-top: 76px; padding-bottom: 106px; }
-  .sakura-branch { right: -128px; width: 470px; opacity: .55; }
   .hero h1 { font-size: clamp(43px, 7.8vw, 59px); }
   .hero-description { font-size: 14px; line-height: 1.75; }
   .availability { margin-top: 31px; }
@@ -188,7 +168,6 @@ h1, h2, h3, p, figure { margin-top: 0; }
   .theme-toggle { width: 35px; min-height: 35px; justify-content: center; padding: 0; }
   .toggle-label { display: none; }
   .hero { display: flex; flex-direction: column; align-items: stretch; gap: 38px; padding: 70px 0 94px; }
-  .sakura-branch { top: -38px; right: -175px; width: 430px; opacity: .43; }
   .hero h1 { font-size: clamp(45px, 12vw, 62px); }
   .hero-description { max-width: 430px; }
   .hero-note { max-width: 310px; padding-left: 18px; }
@@ -220,13 +199,6 @@ h1, h2, h3, p, figure { margin-top: 0; }
   .hero-copy > :nth-child(4) { animation-delay: .24s; }
   .hero-copy > :nth-child(5) { animation-delay: .32s; }
   .hero-note { animation: fade-in .8s .16s both; }
-  .sakura-petals i { animation: sakura-fall 13s linear infinite; }
-  .sakura-petals i:nth-child(2) { animation-delay: -5s; animation-duration: 15s; }
-  .sakura-petals i:nth-child(3) { animation-delay: -9s; animation-duration: 11s; }
-  .sakura-petals i:nth-child(4) { animation-delay: -3s; animation-duration: 17s; }
-  .sakura-petals i:nth-child(5) { animation-delay: -7s; animation-duration: 14s; }
-  .sakura-petals i:nth-child(6) { animation-delay: -11s; animation-duration: 12s; }
-  .sakura-petals i:nth-child(7) { animation-delay: -2s; animation-duration: 16s; }
   .status-dot { animation: status-glow 2.4s ease-in-out infinite; }
   .scroll-cue span { animation: arrow-nudge 1.8s ease-in-out infinite; }
   .project-feature { transition: transform .25s ease, border-color .25s ease; }
@@ -251,9 +223,4 @@ h1, h2, h3, p, figure { margin-top: 0; }
   50% { transform: translateY(3px); }
 }@media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
-}
-@keyframes sakura-fall {
-  0% { translate: 0 -28px; rotate: 0deg; }
-  55% { translate: 24px 235px; rotate: 130deg; }
-  100% { translate: -12px 510px; rotate: 265deg; opacity: 0; }
 }
